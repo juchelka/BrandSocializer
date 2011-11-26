@@ -1,7 +1,5 @@
 require './classes/twitterWorker.rb'
 
-#tahle clasa bude delat neco jineho a to co dela bude delat jina classa neco jako workerProvider...
-
 class SocialActivity
 
   def get_worker(activity)
