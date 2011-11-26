@@ -8,4 +8,4 @@ Twitter.configure do |config|
   config.oauth_token_secret = 'AMkwfjxtVgHL70fYPCcYFOgwGSMjynJyDM3nq10ds'
 end
 
-Twitter.update("I'm tweeting with @gem!")
+Twitter.update("I'm tweeting with gem!")
