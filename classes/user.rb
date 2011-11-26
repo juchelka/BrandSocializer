@@ -1,3 +1,5 @@
-class User
-  attr_accessor :name
+require './classes/socialActor.rb'
+
+class User < SocialActor
+  
 end
