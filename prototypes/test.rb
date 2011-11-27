@@ -4,9 +4,9 @@ require './classes/adapterProvider.rb'
 
 require './modules/twitter.rb'
 
-workers = WorkerProvider.new(Repository.new)
+adapters = AdapterProvider.new(Repository.new)
 
-workers << TwitterAdapter.new(
+adapters << TwitterAdapter.new(
   :auth=>{
     :type=>:oauth,
     :consumer_key=>'06t7BVOLmPZC0dVMO0RdA', 
@@ -19,19 +19,6 @@ workers << TwitterAdapter.new(
 divadlo = Brand.new("Divadlo 29")
 divadlo.activities << TwitterAccount.new("Divadlo29")
 
-workers.process(divadlo)
+adapters.process(divadlo)
 
 puts divadlo
-
-=begin
-divadlo.get_users.each do |user|
-
-  puts user.to_str
-
-  user.get_brands.each do |brand|
-    puts brand.to_str
-  end
-end
-
-=end
-
