@@ -7,26 +7,7 @@ class SocialActor
     @name = name   
   end
 
-  def add_activity(activity)
-    @activities << activity
-  end
-
   def to_s
-    result = @name + "'s activities: "
-    @activities.each do |activity|
-      result << activity << ','
-    end
-
-    result
+    @name + "'s activities: " + @activities.join(', ')
   end
-
-  def get_users
-    result = []
-    @activities.each do |activity|
-      result |= activity.get_users
-    end
-
-    result
-  end
-
 end

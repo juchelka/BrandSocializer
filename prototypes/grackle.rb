@@ -6,4 +6,17 @@ client = Grackle::Client.new(:auth=>{
   :token=>'421838248-taUsvTqBBL6qrkccccy2maIMnoM8RtFjEYTIr57U', :token_secret=>'AMkwfjxtVgHL70fYPCcYFOgwGSMjynJyDM3nq10ds'
 })
 
-puts client.followers.ids? :screen_name=>'Divadlo29'
+puts client.account.rate_limit_status?
+
+=begin
+begin
+  puts client.users.show?(:user_id=>39039276)
+  puts client.followers.ids?(:user_id=>39039276).ids
+rescue Grackle::TwitterError
+  puts 'error'
+end
+
+client.followers.ids?(:user_id=>39039276).ids.each do |id|
+  puts id
+end
+=end

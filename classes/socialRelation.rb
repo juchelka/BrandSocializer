@@ -1,5 +1,5 @@
 # Parent of all classes like follow, comment, checkin
 
-class SocialAction
+class SocialRelation
 
 end

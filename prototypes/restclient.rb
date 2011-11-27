@@ -1,3 +1,3 @@
 require 'rest_client'
 
-puts RestClient.get 'http://washo.cz'
+puts RestClient.get('')
