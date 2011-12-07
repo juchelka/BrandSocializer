@@ -1,8 +1,0 @@
-
-
-class Brand 
-  
-    
-  
-
-end

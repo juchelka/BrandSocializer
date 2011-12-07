@@ -1,5 +1,3 @@
-
-
 #
 # Stahovac
 class TwitterCrawler 
